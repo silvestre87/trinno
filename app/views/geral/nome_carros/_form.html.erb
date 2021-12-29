@@ -1,0 +1,27 @@
+<%= form_with(model: geral_nome_carro, local: true) do |form| %>
+  <% if geral_nome_carro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(geral_nome_carro.errors.count, "error") %> prohibited this geral_nome_carro from being saved:</h2>
+
+      <ul>
+      <% geral_nome_carro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marca_id %>
+    <%= form.select :marca_id, Marca.all.collect { |x| [x.name, x.id] }, {class: 'form-control', selected: form.object.marca_id}%>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

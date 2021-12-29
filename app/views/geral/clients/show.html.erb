@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @geral_client.name %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @geral_client.company_name %>
+</p>
+
+<p>
+  <strong>Document:</strong>
+  <%= @geral_client.document %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @geral_client.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @geral_client.phone %>
+</p>
+
+<p>
+  <strong>Users:</strong>
+  <%= @geral_client.user&.email %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @geral_client.notes %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @geral_client.status %>
+</p>
+
+<%= link_to 'Edit', edit_geral_client_path(@geral_client) %> |
+<%= link_to 'Back', geral_clients_path %>

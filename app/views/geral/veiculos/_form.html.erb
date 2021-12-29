@@ -1,0 +1,37 @@
+<%= form_with(model: geral_veiculo, local: true) do |form| %>
+  <% if geral_veiculo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(geral_veiculo.errors.count, "error") %> prohibited this geral_veiculo from being saved:</h2>
+
+      <ul>
+      <% geral_veiculo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_carro_id %>
+    <%= form.select :name_carro_id, NameCarro.all.collect { |x| [x.name, x.id] }, {class: 'form-control', selected: form.object.name_carro_id}%>
+  </div>
+
+  <div class="field">
+    <%= form.label :ano %>
+    <%= form.number_field :ano %>
+  </div>
+
+  <div class="field">
+    <%= form.label :placa %>
+    <%= form.text_field :placa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :renavam %>
+    <%= form.text_field :renavam %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

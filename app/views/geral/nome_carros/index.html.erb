@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Geral Nome Carros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geral_nome_carros.each do |geral_nome_carro| %>
+      <tr>
+        <td><%= geral_nome_carro.marca_id %></td>
+        <td><%= geral_nome_carro.name %></td>
+        <td><%= link_to 'Show', geral_nome_carro %></td>
+        <td><%= link_to 'Edit', edit_geral_nome_carro_path(geral_nome_carro) %></td>
+        <td><%= link_to 'Destroy', geral_nome_carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geral Nome Carro', new_geral_nome_carro_path %>

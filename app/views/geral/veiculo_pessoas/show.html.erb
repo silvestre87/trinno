@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Veiculo:</strong>
+  <%= @geral_veiculo_pessoa.veiculo&.name %>
+</p>
+
+<p>
+  <strong>Pessoa:</strong>
+  <%= @geral_veiculo_pessoa.pessoa&.name %>
+</p>
+
+<%= link_to 'Edit', edit_geral_veiculo_pessoa_path(@geral_veiculo_pessoa) %> |
+<%= link_to 'Back', geral_veiculo_pessoas_path %>

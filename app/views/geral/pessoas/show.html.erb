@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @geral_pessoa.name %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @geral_pessoa.cpf %>
+</p>
+
+<p>
+  <strong>Rg:</strong>
+  <%= @geral_pessoa.rg %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @geral_pessoa.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @geral_pessoa.telefone %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @geral_client.user&.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @geral_pessoa.status %>
+</p>
+
+<%= link_to 'Edit', edit_geral_pessoa_path(@geral_pessoa) %> |
+<%= link_to 'Back', geral_pessoas_path %>

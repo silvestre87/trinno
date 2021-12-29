@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Geral Marcas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geral_marcas.each do |geral_marca| %>
+      <tr>
+        <td><%= geral_marca.name %></td>
+        <td><%= link_to 'Show', geral_marca %></td>
+        <td><%= link_to 'Edit', edit_geral_marca_path(geral_marca) %></td>
+        <td><%= link_to 'Destroy', geral_marca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geral Marca', new_geral_marca_path %>

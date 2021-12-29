@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  veiculo: one
+  pessoa: one
+
+two:
+  veiculo: two
+  pessoa: two

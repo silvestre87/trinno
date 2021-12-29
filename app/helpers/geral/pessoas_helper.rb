@@ -1,0 +1,2 @@
+module Geral::PessoasHelper
+end

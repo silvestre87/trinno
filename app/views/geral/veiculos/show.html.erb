@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name carro:</strong>
+  <%= @geral_veiculo.name_carro&.name %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @geral_veiculo.ano %>
+</p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @geral_veiculo.placa %>
+</p>
+
+<p>
+  <strong>Renavam:</strong>
+  <%= @geral_veiculo.renavam %>
+</p>
+
+<%= link_to 'Edit', edit_geral_veiculo_path(@geral_veiculo) %> |
+<%= link_to 'Back', geral_veiculos_path %>

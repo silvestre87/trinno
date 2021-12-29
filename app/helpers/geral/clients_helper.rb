@@ -1,0 +1,2 @@
+module Geral::ClientsHelper
+end

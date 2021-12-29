@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Geral Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company name</th>
+      <th>Document</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Users</th>
+      <th>Notes</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geral_clients.each do |geral_client| %>
+      <tr>
+        <td><%= geral_client.name %></td>
+        <td><%= geral_client.company_name %></td>
+        <td><%= geral_client.document %></td>
+        <td><%= geral_client.email %></td>
+        <td><%= geral_client.phone %></td>
+        <td><%= geral_client.user&.email %></td>
+        <td><%= geral_client.notes %></td>
+        <td><%= geral_client.status %></td>
+        <td><%= link_to 'Show', geral_client %></td>
+        <td><%= link_to 'Edit', edit_geral_client_path(geral_client) %></td>
+        <td><%= link_to 'Destroy', geral_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geral Client', new_geral_client_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Geral Veiculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name carro</th>
+      <th>Ano</th>
+      <th>Placa</th>
+      <th>Renavam</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geral_veiculos.each do |geral_veiculo| %>
+      <tr>
+        <td><%= geral_veiculo.name_carro_id %></td>
+        <td><%= geral_veiculo.ano %></td>
+        <td><%= geral_veiculo.placa %></td>
+        <td><%= geral_veiculo.renavam %></td>
+        <td><%= link_to 'Show', geral_veiculo %></td>
+        <td><%= link_to 'Edit', edit_geral_veiculo_path(geral_veiculo) %></td>
+        <td><%= link_to 'Destroy', geral_veiculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geral Veiculo', new_geral_veiculo_path %>

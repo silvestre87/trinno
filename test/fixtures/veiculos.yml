@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_carro: one
+  ano: 1
+  placa: MyString
+  renavam: MyString
+
+two:
+  nome_carro: two
+  ano: 1
+  placa: MyString
+  renavam: MyString
